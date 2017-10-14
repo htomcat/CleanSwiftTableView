@@ -9,12 +9,15 @@
 import UIKit
 
 protocol CleanSwiftDisplayLogic: class {
-    func displaySomething(viewModel: CleanSwift.Something.ViewModel)
+    func displayList(viewModel: CleanSwift.MapInfos.ViewModel)
 }
 
 class CleanSwiftViewController: UIViewController, CleanSwiftDisplayLogic {
     var interactor: CleanSwiftBusinessLogic?
     var router: (NSObjectProtocol & CleanSwiftRoutingLogic & CleanSwiftDataPassing)?
+    let tableViewDelegate = CleanSwiftTableViewDelegate()
+    let tableViewDatasource = CleanSwiftTableViewDatasource()
+    private lazy var tableView: UITableView = self.createTableView()
     
     // MARK: Object lifecycle
     
@@ -41,6 +44,19 @@ class CleanSwiftViewController: UIViewController, CleanSwiftDisplayLogic {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+        tableViewDelegate.router = router
+    }
+    
+    private func createTableView() -> UITableView {
+        let view = UITableView()
+        view.frame = CGRect(x: 0,
+                            y: 0,
+                            width: UIScreen.main.bounds.width,
+                            height: self.view.bounds.height)
+        view.delegate = tableViewDelegate
+        view.dataSource = tableViewDatasource
+        view.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        return view
     }
     
     // MARK: Routing
@@ -58,19 +74,20 @@ class CleanSwiftViewController: UIViewController, CleanSwiftDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        navigationItem.title = "Capital"
+        view.addSubview(tableView)
+        fetchDataStore()
     }
     
     // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething() {
-        let request = CleanSwift.Something.Request()
-        interactor?.doSomething(request: request)
+        
+    func fetchDataStore() {
+        let request = CleanSwift.MapInfos.Request()
+        interactor?.fetchDataStore(request: request)
     }
     
-    func displaySomething(viewModel: CleanSwift.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func displayList(viewModel: CleanSwift.MapInfos.ViewModel) {
+        tableViewDatasource.dataStore = viewModel.infos
+        tableView.reloadData()
     }
 }
