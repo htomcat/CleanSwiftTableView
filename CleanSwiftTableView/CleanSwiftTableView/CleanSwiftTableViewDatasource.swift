@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class CleanSwiftTableViewDatasource: NSObject, UITableViewDataSource {
-    var dataStore: [String]?
+    var dataStore: [CapitalLocation]?
     
     func numberOfSections(in tableView: UITableView) -> Int {
         guard dataStore != nil else {
@@ -28,8 +28,8 @@ class CleanSwiftTableViewDatasource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let title = dataStore?[indexPath.row]
-        cell.textLabel?.text = title
+        let data = dataStore?[indexPath.row]
+        cell.textLabel?.text = data?.capital
         return cell
     }
 }
