@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class CleanSwiftTableViewDelegate: NSObject, UITableViewDelegate {
+    var router: CleanSwiftRouter?
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.routeMapView(at: indexPath)
     }
 }
