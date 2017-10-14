@@ -9,25 +9,27 @@
 import UIKit
 
 protocol CleanSwiftBusinessLogic {
-	func doSomething(request: CleanSwift.Something.Request)
+    func fetchDataStore(request: CleanSwift.MapInfos.Request)
 }
 
 protocol CleanSwiftDataStore {
-	//var name: String { get set }
+    var infos: [CapitalLocation]? {get set}
 }
 
 class CleanSwiftInteractor: CleanSwiftBusinessLogic, CleanSwiftDataStore {
-	var presenter: CleanSwiftPresentationLogic?
-		var worker: CleanSwiftWorker?
-		//var name: String = ""
-
-		// MARK: Do something
-
-		func doSomething(request: CleanSwift.Something.Request) {
-			worker = CleanSwiftWorker()
-				worker?.doSomeWork()
-
-				let response = CleanSwift.Something.Response()
-				presenter?.presentSomething(response: response)
-		}
+    var presenter: CleanSwiftPresentationLogic?
+    var worker: CleanSwiftWorker?
+    var infos: [CapitalLocation]?
+    
+    // MARK: Do something
+    
+    func fetchDataStore(request: CleanSwift.MapInfos.Request) {
+        worker = CleanSwiftWorker()
+        guard let infos = worker?.fetchDataStore() else {
+            return
+        }
+        self.infos = infos
+        let response = CleanSwift.MapInfos.Response(infos: infos)
+        presenter?.presentList(response: response)
+    }
 }
