@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F32D4FED1F91B45600AAED57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D4FEC1F91B45600AAED57 /* AppDelegate.swift */; };
-		F32D4FEF1F91B45600AAED57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D4FEE1F91B45600AAED57 /* ViewController.swift */; };
-		F32D4FF21F91B45600AAED57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D4FF01F91B45600AAED57 /* Main.storyboard */; };
 		F32D4FF41F91B45600AAED57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F32D4FF31F91B45600AAED57 /* Assets.xcassets */; };
 		F32D4FF71F91B45600AAED57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D4FF51F91B45600AAED57 /* LaunchScreen.storyboard */; };
 		F32D50021F91B45600AAED57 /* CleanSwiftTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D50011F91B45600AAED57 /* CleanSwiftTableViewTests.swift */; };
 		F32D500D1F91B45600AAED57 /* CleanSwiftTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D500C1F91B45600AAED57 /* CleanSwiftTableViewUITests.swift */; };
+		F32D501B1F91B61700AAED57 /* CleanSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D501A1F91B61700AAED57 /* CleanSwiftViewController.swift */; };
+		F32D501D1F91B62D00AAED57 /* CleanSwiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D501C1F91B62D00AAED57 /* CleanSwiftInteractor.swift */; };
+		F32D501F1F91B63900AAED57 /* CleanSwiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D501E1F91B63900AAED57 /* CleanSwiftPresenter.swift */; };
+		F32D50211F91B64F00AAED57 /* CleanSwiftWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D50201F91B64F00AAED57 /* CleanSwiftWorker.swift */; };
+		F32D50231F91B66000AAED57 /* CleanSwiftRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D50221F91B66000AAED57 /* CleanSwiftRouter.swift */; };
+		F32D50251F91B68500AAED57 /* CleanSwiftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D50241F91B68500AAED57 /* CleanSwiftModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +40,6 @@
 /* Begin PBXFileReference section */
 		F32D4FE91F91B45600AAED57 /* CleanSwiftTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32D4FEC1F91B45600AAED57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F32D4FEE1F91B45600AAED57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F32D4FF11F91B45600AAED57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F32D4FF31F91B45600AAED57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F32D4FF61F91B45600AAED57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F32D4FF81F91B45600AAED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,12 @@
 		F32D50081F91B45600AAED57 /* CleanSwiftTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanSwiftTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32D500C1F91B45600AAED57 /* CleanSwiftTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftTableViewUITests.swift; sourceTree = "<group>"; };
 		F32D500E1F91B45600AAED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F32D501A1F91B61700AAED57 /* CleanSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftViewController.swift; sourceTree = "<group>"; };
+		F32D501C1F91B62D00AAED57 /* CleanSwiftInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftInteractor.swift; sourceTree = "<group>"; };
+		F32D501E1F91B63900AAED57 /* CleanSwiftPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftPresenter.swift; sourceTree = "<group>"; };
+		F32D50201F91B64F00AAED57 /* CleanSwiftWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftWorker.swift; sourceTree = "<group>"; };
+		F32D50221F91B66000AAED57 /* CleanSwiftRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftRouter.swift; sourceTree = "<group>"; };
+		F32D50241F91B68500AAED57 /* CleanSwiftModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				F32D4FEC1F91B45600AAED57 /* AppDelegate.swift */,
-				F32D4FEE1F91B45600AAED57 /* ViewController.swift */,
-				F32D4FF01F91B45600AAED57 /* Main.storyboard */,
 				F32D4FF31F91B45600AAED57 /* Assets.xcassets */,
 				F32D4FF51F91B45600AAED57 /* LaunchScreen.storyboard */,
 				F32D4FF81F91B45600AAED57 /* Info.plist */,
+				F32D501A1F91B61700AAED57 /* CleanSwiftViewController.swift */,
+				F32D501C1F91B62D00AAED57 /* CleanSwiftInteractor.swift */,
+				F32D501E1F91B63900AAED57 /* CleanSwiftPresenter.swift */,
+				F32D50201F91B64F00AAED57 /* CleanSwiftWorker.swift */,
+				F32D50221F91B66000AAED57 /* CleanSwiftRouter.swift */,
+				F32D50241F91B68500AAED57 /* CleanSwiftModels.swift */,
 			);
 			path = CleanSwiftTableView;
 			sourceTree = "<group>";
@@ -234,7 +246,6 @@
 			files = (
 				F32D4FF71F91B45600AAED57 /* LaunchScreen.storyboard in Resources */,
 				F32D4FF41F91B45600AAED57 /* Assets.xcassets in Resources */,
-				F32D4FF21F91B45600AAED57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F32D4FEF1F91B45600AAED57 /* ViewController.swift in Sources */,
+				F32D50231F91B66000AAED57 /* CleanSwiftRouter.swift in Sources */,
+				F32D501D1F91B62D00AAED57 /* CleanSwiftInteractor.swift in Sources */,
+				F32D50211F91B64F00AAED57 /* CleanSwiftWorker.swift in Sources */,
+				F32D501F1F91B63900AAED57 /* CleanSwiftPresenter.swift in Sources */,
+				F32D501B1F91B61700AAED57 /* CleanSwiftViewController.swift in Sources */,
+				F32D50251F91B68500AAED57 /* CleanSwiftModels.swift in Sources */,
 				F32D4FED1F91B45600AAED57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +312,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F32D4FF01F91B45600AAED57 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F32D4FF11F91B45600AAED57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F32D4FF51F91B45600AAED57 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
