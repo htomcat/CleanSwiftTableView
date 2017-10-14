@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
-        window?.rootViewController = CleanSwiftViewController()
+        let nc = UINavigationController(rootViewController: CleanSwiftViewController())
+        window?.rootViewController = nc
         window?.makeKeyAndVisible()
         return true
     }
