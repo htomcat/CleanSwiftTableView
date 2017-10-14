@@ -8,20 +8,17 @@
 
 import UIKit
 
-enum CleanSwift
-{
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
-    {
+enum CleanSwift {
+    // MARK: Use cases
+    
+    enum MapInfos {
+        struct Request {
+        }
+        struct Response {
+            let infos: [CapitalLocation]
+        }
+        struct ViewModel {
+            let infos: [CapitalLocation]
+        }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
 }
