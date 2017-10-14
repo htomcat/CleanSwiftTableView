@@ -24,6 +24,15 @@ class CleanSwiftRouter: NSObject, CleanSwiftRoutingLogic, CleanSwiftDataPassing
   var dataStore: CleanSwiftDataStore?
   
   // MARK: Routing
+    func routeMapView(at indexPath: IndexPath) {
+        guard let infos = dataStore?.infos else {
+            return
+        }
+        let info = infos[indexPath.row]
+        let mapVC = CleanSwiftMapViewController()
+        mapVC.coordinates = info.location
+        viewController?.navigationController?.pushViewController(mapVC, animated: true)
+    }
   
   //func routeToSomewhere(segue: UIStoryboardSegue?)
   //{
