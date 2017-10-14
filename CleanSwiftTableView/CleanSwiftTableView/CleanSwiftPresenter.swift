@@ -9,16 +9,16 @@
 import UIKit
 
 protocol CleanSwiftPresentationLogic {
-	func presentSomething(response: CleanSwift.Something.Response)
+	func presentList(response: CleanSwift.MapInfos.Response)
 }
 
 class CleanSwiftPresenter: CleanSwiftPresentationLogic {
-	weak var viewController: CleanSwiftDisplayLogic?
-
-		// MARK: Do something
-
-		func presentSomething(response: CleanSwift.Something.Response) {
-			let viewModel = CleanSwift.Something.ViewModel()
-				viewController?.displaySomething(viewModel: viewModel)
-		}
+    weak var viewController: CleanSwiftDisplayLogic?
+    
+    // MARK: Do something
+    
+    func presentList(response: CleanSwift.MapInfos.Response) {
+        let viewModel = CleanSwift.MapInfos.ViewModel(infos: response.infos)
+        viewController?.displayList(viewModel: viewModel)
+    }
 }
