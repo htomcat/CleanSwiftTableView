@@ -20,6 +20,7 @@
 		F32D50251F91B68500AAED57 /* CleanSwiftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D50241F91B68500AAED57 /* CleanSwiftModels.swift */; };
 		F32D50271F91B95000AAED57 /* CleanSwiftTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D50261F91B95000AAED57 /* CleanSwiftTableViewDatasource.swift */; };
 		F32D50291F91B96A00AAED57 /* CleanSwiftTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D50281F91B96A00AAED57 /* CleanSwiftTableViewDelegate.swift */; };
+		F3E5FD072016BDAC00ED86B9 /* CleanSwiftConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FD062016BDAC00ED86B9 /* CleanSwiftConfigurator.swift */; };
 		F3E918CA1F9235B500338AE0 /* CleanSwiftMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E918C91F9235B500338AE0 /* CleanSwiftMapViewController.swift */; };
 		F3E918CC1F9244A400338AE0 /* CapitalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E918CB1F9244A400338AE0 /* CapitalLocation.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		F32D50241F91B68500AAED57 /* CleanSwiftModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftModels.swift; sourceTree = "<group>"; };
 		F32D50261F91B95000AAED57 /* CleanSwiftTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftTableViewDatasource.swift; sourceTree = "<group>"; };
 		F32D50281F91B96A00AAED57 /* CleanSwiftTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftTableViewDelegate.swift; sourceTree = "<group>"; };
+		F3E5FD062016BDAC00ED86B9 /* CleanSwiftConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftConfigurator.swift; sourceTree = "<group>"; };
 		F3E918C91F9235B500338AE0 /* CleanSwiftMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMapViewController.swift; sourceTree = "<group>"; };
 		F3E918CB1F9244A400338AE0 /* CapitalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				F32D50281F91B96A00AAED57 /* CleanSwiftTableViewDelegate.swift */,
 				F3E918C91F9235B500338AE0 /* CleanSwiftMapViewController.swift */,
 				F3E918CB1F9244A400338AE0 /* CapitalLocation.swift */,
+				F3E5FD062016BDAC00ED86B9 /* CleanSwiftConfigurator.swift */,
 			);
 			path = CleanSwiftTableView;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			files = (
 				F32D50231F91B66000AAED57 /* CleanSwiftRouter.swift in Sources */,
 				F32D50291F91B96A00AAED57 /* CleanSwiftTableViewDelegate.swift in Sources */,
+				F3E5FD072016BDAC00ED86B9 /* CleanSwiftConfigurator.swift in Sources */,
 				F32D501D1F91B62D00AAED57 /* CleanSwiftInteractor.swift in Sources */,
 				F32D50211F91B64F00AAED57 /* CleanSwiftWorker.swift in Sources */,
 				F32D501F1F91B63900AAED57 /* CleanSwiftPresenter.swift in Sources */,
