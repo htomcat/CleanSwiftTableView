@@ -8,17 +8,21 @@
 
 import UIKit
 
-protocol CleanSwiftPresentationLogic {
-	func presentList(response: CleanSwift.MapInfos.Response)
+protocol CleanSwiftPresenterInput {
+	func presentList(_ response: CleanSwift.MapInfos.Response)
 }
 
-class CleanSwiftPresenter: CleanSwiftPresentationLogic {
-    weak var viewController: CleanSwiftDisplayLogic?
+protocol CleanSwiftPresenterOutput: class {
+    func displayList(_ viewModel: CleanSwift.MapInfos.ViewModel)
+}
+
+class CleanSwiftPresenter: CleanSwiftPresenterInput {
+    weak var output: CleanSwiftPresenterOutput?
     
     // MARK: Do something
     
-    func presentList(response: CleanSwift.MapInfos.Response) {
+    func presentList(_ response: CleanSwift.MapInfos.Response) {
         let viewModel = CleanSwift.MapInfos.ViewModel(infos: response.infos)
-        viewController?.displayList(viewModel: viewModel)
+        output?.displayList(viewModel)
     }
 }

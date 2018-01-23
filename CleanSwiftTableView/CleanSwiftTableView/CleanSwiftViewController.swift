@@ -8,45 +8,34 @@
 
 import UIKit
 
-protocol CleanSwiftDisplayLogic: class {
-    func displayList(viewModel: CleanSwift.MapInfos.ViewModel)
+protocol CleanSwiftViewControllerInput {
+    func displayList(_ viewModel: CleanSwift.MapInfos.ViewModel)
 }
 
-class CleanSwiftViewController: UIViewController, CleanSwiftDisplayLogic {
-    var interactor: CleanSwiftBusinessLogic?
+protocol CleanSwiftViewControllerOutput {
+    func fetchDataStore(_ request: CleanSwift.MapInfos.Request)
+}
+
+class CleanSwiftViewController: UIViewController {
+    var output: CleanSwiftViewControllerOutput?
     var router: (NSObjectProtocol & CleanSwiftRoutingLogic & CleanSwiftDataPassing)?
     let tableViewDelegate = CleanSwiftTableViewDelegate()
     let tableViewDatasource = CleanSwiftTableViewDatasource()
     private lazy var tableView: UITableView = self.createTableView()
     
+    
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
+        CleanSwiftConfigurator.shared.configure(self)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        CleanSwiftConfigurator.shared.configure(self)
     }
-    
-    // MARK: Setup
-    
-    private func setup() {
-        let viewController = self
-        let interactor = CleanSwiftInteractor()
-        let presenter = CleanSwiftPresenter()
-        let router = CleanSwiftRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
-        tableViewDelegate.router = router
-    }
-    
+
     private func createTableView() -> UITableView {
         let view = UITableView()
         view.frame = CGRect(x: 0,
@@ -79,14 +68,24 @@ class CleanSwiftViewController: UIViewController, CleanSwiftDisplayLogic {
         fetchDataStore()
     }
     
-    // MARK: Do something
+    // MARK: Event Handler
+    
+    private func doSomethingOnLoad() {
         
-    func fetchDataStore() {
-        let request = CleanSwift.MapInfos.Request()
-        interactor?.fetchDataStore(request: request)
     }
     
-    func displayList(viewModel: CleanSwift.MapInfos.ViewModel) {
+    private func doSomething(request: CleanSwift.MapInfos.Request) {
+        
+    }
+
+    private func fetchDataStore() {
+        let request = CleanSwift.MapInfos.Request()
+        output?.fetchDataStore(request)
+    }
+}
+// MARK: - CleanSwiftViewControllerInput
+extension CleanSwiftViewController: CleanSwiftViewControllerInput {
+    func displayList(_ viewModel: CleanSwift.MapInfos.ViewModel) {
         tableViewDatasource.dataStore = viewModel.infos
         tableView.reloadData()
     }
